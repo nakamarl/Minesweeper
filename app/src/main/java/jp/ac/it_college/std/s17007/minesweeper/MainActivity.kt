@@ -59,6 +59,210 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+
+        var counter = 0
+        for(i in 0..8){
+            for(j in 0..8){
+                if(i == 0){
+                    if(j == 0){
+                        if(mineField[i][j] != "*"){
+                            if (mineField[i + 1][j].equals("*")) {
+                                counter++
+                            }
+                            if (mineField[i][j + 1].equals("*")) {
+                                counter++
+                            }
+                            if (mineField[i + 1][j + 1].equals("*")) {
+                                counter++
+                            }
+                            if (counter >= 1) {
+                                mineField[i][j] = counter.toString()
+                            }
+                        }
+
+                    }
+                    else if(j == 8){
+                        if(mineField[i][j] != "*") {
+                            if (mineField[i][j - 1].equals("*")) {
+                                counter++
+                            }
+                            if (mineField[i + 1][j - 1].equals("*")) {
+                                counter++
+                            }
+                            if (mineField[i + 1][j].equals("*")) {
+                                counter++
+                            }
+                            if (counter >= 1) {
+                                mineField[i][j] = counter.toString()
+                            }
+                        }
+                    }
+                    else{
+                        if(mineField[i][j] != "*") {
+                            if (mineField[i][j - 1].equals("*")) {
+                                counter++
+                            }
+                            if (mineField[i + 1][j - 1].equals("*")) {
+                                counter++
+                            }
+                            if (mineField[i + 1][j].equals("*")) {
+                                counter++
+                            }
+                            if (mineField[i + 1][j + 1].equals("*")) {
+                                counter++
+                            }
+                            if (mineField[i][j + 1].equals("*")) {
+                                counter++
+                            }
+                            if (counter >= 1) {
+                                mineField[i][j] = counter.toString()
+                            }
+                        }
+                    }
+                }
+                else if(i == 8){
+                    if(j == 0){
+                        if(mineField[i][j] != "*") {
+                            if (mineField[i - 1][j].equals("*")) {
+                                counter++
+                            }
+                            if (mineField[i - 1][j + 1].equals("*")) {
+                                counter++
+                            }
+                            if (mineField[i][j + 1].equals("*")) {
+                                counter++
+                            }
+                            if (counter >= 1) {
+                                mineField[i][j] = counter.toString()
+                            }
+                        }
+                    }
+                    else if(j == 8){
+                        if(mineField[i][j] != "*"){
+                            if(mineField[i][j-1].equals("*")){
+                                counter++
+                            }
+                            if(mineField[i-1][j-1].equals("*")){
+                                counter++
+                            }
+                            if(mineField[i-1][j].equals("*")){
+                                counter++
+                            }
+                            if(counter >= 1){
+                                mineField[i][j] = counter.toString()
+                            }
+                        }
+                    }
+                    else{
+                        if(mineField[i][j] != "*"){
+                            if(mineField[i][j-1].equals("*")){
+                                counter++
+                            }
+                            if(mineField[i-1][j-1].equals("*")){
+                                counter++
+                            }
+                            if(mineField[i-1][j].equals("*")){
+                                counter++
+                            }
+                            if(mineField[i-1][j+1].equals("*")){
+                                counter++
+                            }
+                            if(mineField[i][j+1].equals("*")){
+                                counter++
+                            }
+                            if(counter >= 1){
+                                mineField[i][j] = counter.toString()
+                            }
+                        }
+                    }
+                }
+                else{
+                    if(j == 0){
+                        if(mineField[i][j] != "*"){
+                            if(mineField[i-1][j].equals("*")){
+                                counter++
+                            }
+                            if(mineField[i-1][j+1].equals("*")){
+                                counter++
+                            }
+                            if(mineField[i][j+1].equals("*")){
+                                counter++
+                            }
+                            if(mineField[i+1][j+1].equals("*")){
+                                counter++
+                            }
+                            if(mineField[i+1][j].equals("*")){
+                                counter++
+                            }
+                            if(counter >= 1){
+                                mineField[i][j] = counter.toString()
+                            }
+                        }
+                    }
+                    else if(j == 8){
+                        if(mineField[i][j] != "*"){
+                            if(mineField[i-1][j].equals("*")){
+                                counter++
+                            }
+                            if(mineField[i-1][j-1].equals("*")){
+                                counter++
+                            }
+                            if(mineField[i][j-1].equals("*")){
+                                counter++
+                            }
+                            if(mineField[i+1][j-1].equals("*")){
+                                counter++
+                            }
+                            if(mineField[i+1][j].equals("*")){
+                                counter++
+                            }
+                            if(counter >= 1){
+                                mineField[i][j] = counter.toString()
+                            }
+                        }
+                    }
+                    else{
+                        if(mineField[i][j] != "*"){
+                            if(mineField[i-1][j-1].equals("*")){
+                                counter++
+                            }
+                            if(mineField[i-1][j].equals("*")){
+                                counter++
+                            }
+                            if(mineField[i-1][j+1].equals("*")){
+                                counter++
+                            }
+                            if(mineField[i][j-1].equals("*")){
+                                counter++
+                            }
+                            if(mineField[i][j+1].equals("*")){
+                                counter++
+                            }
+                            if(mineField[i+1][j-1].equals("*")){
+                                counter++
+                            }
+                            if(mineField[i+1][j].equals("*")){
+                                counter++
+                            }
+                            if(mineField[i+1][j+1].equals("*")){
+                                counter++
+                            }
+                            if(counter >= 1){
+                                mineField[i][j] = counter.toString()
+                            }
+                        }
+                    }
+                }
+                counter = 0
+            }
+        }
+
+
+
+
+
+
+
         var id = 0
         var idString = "textview"
         for(i in 0..8){
@@ -71,6 +275,8 @@ class MainActivity : AppCompatActivity() {
                 id++
             }
         }
+
+
 
     }
 }
