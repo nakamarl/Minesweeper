@@ -60,6 +60,8 @@ class MainActivity : AppCompatActivity() {
         }
 
 
+
+
         var counter = 0
         for(i in 0..8){
             for(j in 0..8){
@@ -259,10 +261,6 @@ class MainActivity : AppCompatActivity() {
 
 
 
-
-
-
-
         var id = 0
         var idString = "textview"
         for(i in 0..8){
@@ -276,9 +274,9 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-
-
     }
+
+    
 }
 
 
